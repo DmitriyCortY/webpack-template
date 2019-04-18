@@ -1,7 +1,16 @@
+@import './lib/smart-grid.scss';
+@import './include/mixins.scss';
+@import './include/var.scss';
+@import './include/font.scss';
+
 h1{
     color: green;
     font-size: 20px;
+    font-family: 'Proxima Nova';
     display: flex;
+    @include from(300px){
+        background-color: $accentColor;
+    }
 }
 .qwe{
     height: 300px;

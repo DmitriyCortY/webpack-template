@@ -100,6 +100,15 @@ module.exports = {
             {
                 from: `${PATHS.src}/static`,
                 to: ''
+            },
+            {
+                from: `${PATHS.src}/lib`,
+                to: `${PATHS.assets}lib`
+            }
+            ,
+            {
+                from: `${PATHS.src}/font`,
+                to: `${PATHS.assets}font`
             }
         ]),
         new HtmlWebpackPlugin({
