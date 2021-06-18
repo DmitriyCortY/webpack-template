@@ -32,7 +32,7 @@
     "imagemin-svgo": "^9.0.0",
     "imagemin-webpack": "^5.1.1",
     "mini-css-extract-plugin": "^1.6.0",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^6.0.0",
     "sass-loader": "^12.1.0",
     "stylelint": "^13.13.1",
