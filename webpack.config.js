@@ -6,20 +6,26 @@ const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugi
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack')
 
+const fs = require('fs')
+function getFilesNameFromPath(path, extension) {
+    let files = fs.readdirSync( path );
+    return files.filter( file => file.match(new RegExp(`.*\.(${extension})`, 'ig')));
+}
+
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`
 
-const pages = [
+const pages = /*[
     'index',
     'blog'
-]
+]*/getFilesNameFromPath("./src", ".html")
 
 const HtmlWebpackPluginMultiplePages = pages.map(name => {
     return new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, `src/${name}.html`),
-        filename: `${name}.html`,
+        template: path.resolve(__dirname, `src/${name}`),
+        filename: `${name}`,
         minify: {
             collapseWhitespace: isProd
         }
@@ -83,7 +89,7 @@ const plugins = () => {
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: './assets/js/main.js',
+    entry: '../index.js',
     output: {
         filename: `./assets/js/${filename('js')}`,
         path: path.resolve(__dirname, 'dist'),
