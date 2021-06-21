@@ -6,9 +6,11 @@ const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugi
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack')
 
+const Handlebars = require('./handlebars')
+
 const fs = require('fs')
-function getFilesNameFromPath(path, extension) {
-    let files = fs.readdirSync( path );
+function getFilesNameFromPath(_path, extension) {
+    let files = fs.readdirSync( _path );
     return files.filter( file => file.match(new RegExp(`.*\.(${extension})`, 'ig')));
 }
 
@@ -26,9 +28,7 @@ const HtmlWebpackPluginMultiplePages = pages.map(name => {
     return new HtmlWebpackPlugin({
         template: path.resolve(__dirname, `src/${name}`),
         filename: `${name}`,
-        minify: {
-            collapseWhitespace: isProd
-        }
+        minify: isProd
     })
 })
 
@@ -113,7 +113,10 @@ module.exports = {
                 test: /\.html$/i,
                 loader: 'html-loader',
                 options: {
-                    esModule: false
+                    esModule: true,
+                    preprocessor: async (content) => {
+                        return await Handlebars.convert(content)
+                    }
                 }
             },
             // css
