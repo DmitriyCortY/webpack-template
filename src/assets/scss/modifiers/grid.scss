@@ -1,0 +1,69 @@
+[class*="__container-xl"] {
+  @include container-xl;
+}
+
+[class*="__container-lg"] {
+  @include container-lg;
+}
+
+[class*="__container-md"] {
+  @include container-md;
+}
+
+[class*="__container-sm"] {
+  @include container-sm;
+}
+
+[class*="__container-xs"] {
+  @include container-xs;
+}
+
+[class*="__row"] {
+  @include row;
+}
+
+// cols
+.b-col {
+}
+
+// default
+@for $i from 1 through $cols {
+  .b-col_#{$i} {
+    @include col($i);
+  }
+}
+
+// xl
+@for $i from 1 through $cols {
+  .b-col_xl-#{$i} {
+    @include col-xl($i);
+  }
+}
+
+// lg
+@for $i from 1 through $cols {
+  .b-col_lg-#{$i} {
+    @include col-lg($i);
+  }
+}
+
+// md
+@for $i from 1 through $cols {
+  .b-col_md-#{$i} {
+    @include col-md($i);
+  }
+}
+
+// sm
+@for $i from 1 through $cols {
+  .b-col_sm-#{$i} {
+    @include col-sm($i);
+  }
+}
+
+// xs
+@for $i from 1 through $cols {
+  .b-col_xs-#{$i} {
+    @include col-xs($i);
+  }
+}

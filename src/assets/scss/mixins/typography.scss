@@ -1,0 +1,35 @@
+@mixin title-h1() {
+  font-size: 80px;
+  line-height: $title-line-height;
+  letter-spacing: $title-letter-spacing;
+}
+
+@mixin title-h2() {
+  font-size: 70px;
+  line-height: $title-line-height;
+  letter-spacing: $title-letter-spacing;
+}
+
+@mixin title-h3() {
+  font-size: 46px;
+  line-height: $title-line-height;
+  letter-spacing: $title-letter-spacing;
+}
+
+@mixin title-h4() {
+  font-size: 24px;
+  line-height: $title-line-height;
+  letter-spacing: $title-letter-spacing;
+}
+
+@mixin title-h5() {
+  font-size: 16px;
+  line-height: $title-line-height;
+  letter-spacing: $title-letter-spacing;
+}
+
+@mixin title-h6() {
+  font-size: 13px;
+  line-height: $title-line-height;
+  letter-spacing: $title-letter-spacing;
+}

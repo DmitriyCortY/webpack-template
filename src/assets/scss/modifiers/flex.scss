@@ -1,0 +1,48 @@
+[class*="_ai-center"] {
+  align-items: center;
+}
+
+[class*="_ai-end"] {
+  align-items: flex-end;
+}
+
+[class*="_ai-start"] {
+  align-items: flex-start;
+}
+
+[class*="_ai-baseline"] {
+  align-items: baseline;
+}
+
+[class*="_jc-center"] {
+  justify-content: center;
+}
+
+[class*="_jc-end"] {
+  justify-content: flex-end;
+}
+
+[class*="_jc-start"] {
+  justify-content: flex-start;
+}
+
+[class*="_jc-between"] {
+  justify-content: space-between;
+}
+
+[class*="_jc-around"] {
+  justify-content: space-around;
+}
+
+[class*="_jc-evenly"] {
+  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+[class*="_fw-wrap"] {
+  flex-wrap: wrap;
+}
+
+[class*="_fw-nowrap"] {
+  flex-wrap: nowrap;
+}

@@ -1,0 +1,17 @@
+$cols: 12;
+$offset: 20px;
+$offset-xs: 10px;
+$container-xl: $breakpoint-xl;
+$container-lg: $breakpoint-lg;
+$container-md: $breakpoint-md;
+$container-sm: $breakpoint-sm;
+$container-xs: $breakpoint-xs;
+$container-mobile: $breakpoint-mobile;
+
+$container: (
+        'container-xl': $container-xl,
+        'container-lg': $container-lg,
+        'container-md': $container-md,
+        'container-sm': $container-sm,
+        'container-xs': $container-xs
+);

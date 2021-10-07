@@ -1,0 +1,65 @@
+[data-fancybox] {
+  cursor: zoom-in;
+}
+
+[class*="_o-hidden"] {
+  overflow: hidden;
+}
+
+[class*="_ta-center"] {
+  text-align: center;
+}
+
+[class*="_ta-left"] {
+  text-align: left;
+}
+
+[class*="_ta-right"] {
+  text-align: right;
+}
+
+@each $size in (0, 25, 50, 75, 100) {
+  [class*="_w-#{$size}"] {
+    width: #{$size + '%'};
+  }
+
+  [class*="_h-#{$size}"] {
+    height: #{$size + '%'};
+  }
+}
+
+@each $d in (flex, block, none, inline-flex, inline-block) {
+  [class*="_d-#{$d}"] {
+    display: #{$d};
+  }
+
+  [class*="_d-xl-#{$d}"] {
+    @include xl {
+      display: #{$d};
+    }
+  }
+
+  [class*="_d-lg-#{$d}"] {
+    @include lg {
+      display: #{$d};
+    }
+  }
+
+  [class*="_d-md-#{$d}"] {
+    @include md {
+      display: #{$d};
+    }
+  }
+
+  [class*="_d-sm-#{$d}"] {
+    @include sm {
+      display: #{$d};
+    }
+  }
+
+  [class*="_d-xs-#{$d}"] {
+    @include xs {
+      display: #{$d};
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@mixin inh() {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+@mixin hover {
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    @content;
+  }
+}
+
+@mixin before {
+  position: relative;
+
+  &:before {
+    content: "";
+    @content;
+  }
+}
+
+@mixin after {
+  position: relative;
+
+  &:after {
+    content: "";
+    @content;
+  }
+}

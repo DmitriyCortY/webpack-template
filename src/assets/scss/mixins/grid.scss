@@ -1,0 +1,161 @@
+@mixin container-xl() {
+  max-width: $container-xl;
+  padding-left: $offset;
+  padding-right: $offset;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include xl {
+    max-width: $container-lg;
+  }
+
+  @include lg {
+    max-width: $container-md;
+  }
+
+  @include md {
+    max-width: $container-sm;
+  }
+
+  @include sm {
+    max-width: $container-xs;
+    padding-left: $offset-xs;
+    padding-right: $offset-xs;
+  }
+
+  @include xs {
+    max-width: $container-mobile;
+  }
+}
+
+@mixin container-lg() {
+  max-width: $container-lg;
+  padding-left: $offset;
+  padding-right: $offset;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include lg {
+    max-width: $container-md;
+  }
+
+  @include md {
+    max-width: $container-sm;
+  }
+
+  @include sm {
+    max-width: $container-xs;
+    padding-left: $offset-xs;
+    padding-right: $offset-xs;
+  }
+
+  @include xs {
+    max-width: $container-mobile;
+  }
+}
+
+@mixin container-md() {
+  max-width: $container-md;
+  padding-left: $offset;
+  padding-right: $offset;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include md {
+    max-width: $container-sm;
+  }
+
+  @include sm {
+    max-width: $container-xs;
+    padding-left: $offset-xs;
+    padding-right: $offset-xs;
+  }
+
+  @include xs {
+    max-width: $container-mobile;
+  }
+}
+
+@mixin container-sm() {
+  max-width: $container-sm;
+  padding-left: $offset;
+  padding-right: $offset;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include sm {
+    max-width: $container-xs;
+    padding-left: $offset-xs;
+    padding-right: $offset-xs;
+  }
+
+  @include xs {
+    max-width: $container-mobile;
+  }
+}
+
+@mixin container-xs() {
+  max-width: $container-xs;
+  padding-left: $offset-xs;
+  padding-right: $offset-xs;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include xs {
+    max-width: $container-mobile;
+  }
+}
+
+@mixin row() {
+  @include flex-row;
+  width: calc(100% + #{$offset * 2});
+  margin: #{$offset * -1};
+  @include sm {
+    margin: #{$offset-xs * -1};
+    width: calc(100% + #{$offset-xs});
+  }
+}
+
+@mixin col($n) {
+  width: 100%;
+  max-width: #{((100 / 12) * $n) + '%'};
+  padding: #{$offset};
+  @include sm {
+    padding: #{$offset / 2};
+  }
+}
+
+@mixin col-xl($n) {
+  @include xl() {
+    max-width: #{((100 / 12) * $n) + '%'};
+  }
+}
+
+@mixin col-lg($n) {
+  @include lg() {
+    max-width: #{((100 / 12) * $n) + '%'};
+  }
+}
+
+@mixin col-md($n) {
+  @include md() {
+    max-width: #{((100 / 12) * $n) + '%'};
+  }
+}
+
+@mixin col-sm($n) {
+  @include sm() {
+    max-width: #{((100 / 12) * $n) + '%'};
+  }
+}
+
+@mixin col-xs($n) {
+  @include xs() {
+    max-width: #{((100 / 12) * $n) + '%'};
+  }
+}

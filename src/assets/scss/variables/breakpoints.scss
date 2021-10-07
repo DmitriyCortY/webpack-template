@@ -1,0 +1,15 @@
+$breakpoint-xl: 1440px;
+$breakpoint-lg: 1170px;
+$breakpoint-md: 960px;
+$breakpoint-sm: 780px;
+$breakpoint-xs: 560px;
+$breakpoint-mobile: 420px;
+
+$breakpoint: (
+        'breakpoint-xl': $breakpoint-xl,
+        'breakpoint-lg': $breakpoint-lg,
+        'breakpoint-md': $breakpoint-md,
+        'breakpoint-sm': $breakpoint-sm,
+        'breakpoint-xs': $breakpoint-xs,
+        'breakpoint-mobile': $breakpoint-mobile
+);

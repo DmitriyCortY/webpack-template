@@ -1,0 +1,15 @@
+@each $key, $value in $colors {
+  [class*="_c-#{$key}"] {
+    color: $value;
+  }
+}
+@each $key, $value in $colors {
+  [class*="_bgc-#{$key}"] {
+    background-color: $value;
+  }
+}
+@each $key, $value in $colors {
+  [class*="_bc-#{$key}"] {
+    border-color: $value;
+  }
+}
